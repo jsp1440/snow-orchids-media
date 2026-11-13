@@ -1,0 +1,14 @@
+{
+  "name": "snow-orchids-animation",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Santa Claus and the Quest for the Snow Orchids — 60 s Three.js cinematic",
+  "type": "module",
+  "scripts": {
+    "preview": "node tools/serve.mjs",
+    "render": "node tools/render-mp4.mjs --song 1 --workers 3",
+    "test": "node tools/test-preview.mjs"
+  },
+  "devDependencies": { "playwright": "^1.48.0" },
+  "license": "UNLICENSED"
+}

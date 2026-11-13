@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quest for the Snow Orchids</title>
+<style>
+  @font-face { font-family: 'Cinzel'; font-weight: 400; src: url('vendor/fonts/cinzel-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Cinzel'; font-weight: 700; src: url('vendor/fonts/cinzel-latin-700-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Cormorant Garamond'; font-weight: 500; font-style: italic; src: url('vendor/fonts/cormorant-garamond-latin-500-italic.woff2') format('woff2'); }
+  @font-face { font-family: 'Cormorant Garamond'; font-weight: 500; src: url('vendor/fonts/cormorant-garamond-latin-500-normal.woff2') format('woff2'); }
+  :root { --bg: #04060f; --panel: #0d1530; --ink: #e9eeff; --muted: #9aa6cc; --gold: #f0c66b; --line: #24305a; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: 'Cormorant Garamond', Georgia, serif; overflow: hidden; }
+  #wrap { position: absolute; inset: 0 0 96px 0; display: flex; align-items: center; justify-content: center; }
+  canvas { display: block; background: #000; box-shadow: 0 0 60px rgba(60,90,200,0.25); }
+  #loading { position: absolute; inset: 0; display: grid; place-items: center; font-family: Cinzel, serif; letter-spacing: 0.2em; color: var(--muted); pointer-events: none; }
+  body.ready #loading { display: none; }
+  #bar { position: absolute; left: 0; right: 0; bottom: 0; height: 96px; padding: 10px 16px; background: linear-gradient(#0a1026, #070b1b); border-top: 1px solid var(--line); display: grid; grid-template-columns: auto auto 1fr auto; grid-template-rows: auto auto; gap: 6px 12px; align-items: center; }
+  button, select { font: 600 15px/1 Georgia, serif; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+  button:hover, select:hover { border-color: var(--gold); }
+  #play { min-width: 104px; }
+  #scrub { width: 100%; accent-color: var(--gold); }
+  #time { font: 14px ui-monospace, Menlo, monospace; color: var(--muted); min-width: 120px; text-align: right; }
+  #chips { grid-column: 1 / -1; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  #chips button { font-size: 12px; padding: 4px 8px; color: var(--muted); }
+  #chips button.on { color: #1a1205; background: var(--gold); border-color: var(--gold); }
+  #chips .spacer { flex: 1; }
+  #chips label { font-size: 12px; color: var(--muted); display: flex; gap: 4px; align-items: center; }
+  #chips select { font-size: 12px; padding: 4px 6px; }
+  body.export #bar, body.export #loading { display: none; }
+  body.export #wrap { inset: 0; }
+  @media (max-width: 720px) {
+    #wrap { inset: 0 0 132px 0; }
+    #bar { height: 132px; grid-template-columns: auto auto 1fr; }
+    #time { grid-column: 1 / -1; text-align: left; order: 5; }
+  }
+</style>
+<script type="importmap">
+{ "imports": { "three": "./vendor/three/build/three.module.js", "three/addons/": "./vendor/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="wrap"><canvas id="stage" width="1920" height="1080"></canvas><div id="loading">Gathering snow orchids…</div></div>
+<div id="bar">
+  <button id="play" title="Play / Pause (Space)">▶ Play</button>
+  <button id="restart" title="Restart">⟲ Restart</button>
+  <input id="scrub" type="range" min="0" max="60" step="0.0333333" value="0" aria-label="Timeline">
+  <span id="time">0:00.0 / 1:00.0</span>
+  <div id="chips">
+    <button data-jump="0">1 · Lapland</button>
+    <button data-jump="10.7">2 · Himalayas</button>
+    <button data-jump="20.7">3 · Japan</button>
+    <button data-jump="30.7">4 · Pacific NW</button>
+    <button data-jump="40.7">5 · Rockies</button>
+    <button data-jump="50.7">6 · Snow Orchids</button>
+    <span class="spacer"></span>
+    <label>Music <select id="songSel"><option value="0">Silent</option><option value="1" selected>Song 1</option><option value="2">Song 2</option><option value="3">Song 3</option><option value="4">Song 4</option></select></label>
+    <label>Quality <select id="qualitySel"><option value="high">High</option><option value="low">Low / mobile</option></select></label>
+  </div>
+</div>
+<audio id="song" preload="auto"></audio>
+<script>if (location.search.includes('export')) document.body.classList.add('export');</script>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
