@@ -1,0 +1,58 @@
+# Snow Orchids: record the cast audio with ElevenLabs (snow-orchids-media repository).
+# Actions tab > "Generate cast audio" > Run workflow.
+# Spends credits only when "authorize" is exactly: I authorize spending ElevenLabs credits
+# Otherwise it is a free check: it confirms the approved voices and shows the estimate.
+# Needs the repository secret ELEVENLABS_API_KEY (Settings > Secrets and variables > Actions).
+name: Generate cast audio
+on:
+  workflow_dispatch:
+    inputs:
+      chapter:
+        description: 'Chapter number (1 to 9)'
+        required: true
+        default: '1'
+      sample:
+        description: 'Only the Chapter 1 sample passages'
+        type: boolean
+        default: true
+      max_chars:
+        description: 'Hard cap on characters (credits) for this run'
+        required: true
+        default: '1300'
+      model:
+        description: 'ElevenLabs model'
+        required: true
+        default: 'eleven_multilingual_v2'
+      authorize:
+        description: 'Type exactly: I authorize spending ElevenLabs credits   (leave blank for a free check)'
+        required: false
+        default: ''
+permissions:
+  contents: write
+concurrency: generate-cast-audio
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check the approved voices and estimate (free)
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node generate-audio.mjs --check-voices --chapter "${{ inputs.chapter }}" ${{ inputs.sample && '--sample' || '' }} --model "${{ inputs.model }}"
+      - name: Record (spends credits)
+        if: ${{ inputs.authorize == 'I authorize spending ElevenLabs credits' }}
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_PRONUNCIATION_DICTIONARY_ID: ${{ vars.ELEVENLABS_PRONUNCIATION_DICTIONARY_ID }}
+        run: node generate-audio.mjs --chapter "${{ inputs.chapter }}" ${{ inputs.sample && '--sample' || '' }} --model "${{ inputs.model }}" --max-chars "${{ inputs.max_chars }}" --generate --confirm
+      - name: Save the recordings
+        if: ${{ inputs.authorize == 'I authorize spending ElevenLabs credits' }}
+        run: |
+          git config user.name "snow-orchids-audio-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add audio
+          git diff --cached --quiet || git commit -m "Cast audio: chapter ${{ inputs.chapter }}${{ inputs.sample && ' sample' || '' }}"
+          git push
