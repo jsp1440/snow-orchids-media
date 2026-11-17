@@ -1,0 +1,109 @@
+{
+ "_about": "Snow Orchids cast for Kokoro-82M (open-source voices, Apache 2.0). role = the speaker name in audio-plan.json. voice = a Kokoro voice (af_/am_ = American, bf_/bm_ = British). speed 1 = normal. Change a voice here and record again; passages whose voice changed are re-recorded.",
+ "default": {
+  "voice": "bm_george",
+  "speed": 1.0
+ },
+ "roles": {
+  "NARRATOR": {
+   "voice": "bm_george",
+   "speed": 0.95,
+   "why": "Warm British storyteller"
+  },
+  "Santa": {
+   "voice": "am_santa",
+   "speed": 0.95,
+   "why": "Kokoro's Santa voice: deep and jolly"
+  },
+  "Mrs. Claus": {
+   "voice": "af_heart",
+   "speed": 1.0,
+   "why": "Kokoro's warmest, clearest voice, for the largest speaking part"
+  },
+  "Snowbell": {
+   "voice": "af_nova",
+   "speed": 1.0,
+   "why": "Soft but bright librarian"
+  },
+  "Marigold": {
+   "voice": "af_river",
+   "speed": 1.08,
+   "why": "Breathless, hurrying elf"
+  },
+  "Tiny Tamsin": {
+   "voice": "af_sky",
+   "speed": 1.05,
+   "why": "Lightest, youngest-sounding voice"
+  },
+  "the elves": {
+   "voice": "af_sky",
+   "speed": 1.1,
+   "why": "Excited cheer"
+  },
+  "the Guardian": {
+   "voice": "af_aoede",
+   "speed": 0.92,
+   "why": "Soft as a dewdrop: Guardian of the Fairy Slipper"
+  },
+  "the snow leopard": {
+   "voice": "bf_emma",
+   "speed": 0.9,
+   "why": "Low and calm"
+  },
+  "the Wind-Guide": {
+   "voice": "af_alloy",
+   "speed": 0.9,
+   "why": "Airy and unhurried"
+  },
+  "the Mycelial Spirit": {
+   "voice": "bm_fable",
+   "speed": 0.9,
+   "why": "Ancient forest voice"
+  },
+  "the Elder": {
+   "voice": "am_onyx",
+   "speed": 0.82,
+   "why": "Slow and deep, clearly different from Santa"
+  },
+  "the vicuña": {
+   "voice": "am_puck",
+   "speed": 1.08,
+   "why": "Light and quick, as if trying not to laugh"
+  },
+  "Dr. Mori": {
+   "voice": "af_kore",
+   "speed": 1.0,
+   "why": "Calm field scientist"
+  },
+  "Killa": {
+   "voice": "af_jessica",
+   "speed": 1.05,
+   "why": "Bright, energetic girl"
+  },
+  "Mamá Rosa": {
+   "voice": "bf_isabella",
+   "speed": 0.92,
+   "why": "Grounded elder"
+  },
+  "Tomás": {
+   "voice": "am_eric",
+   "speed": 1.0,
+   "why": "Friendly, good-humored"
+  },
+  "the grandmother": {
+   "voice": "bf_alice",
+   "speed": 0.92,
+   "why": "Warm Sherpa elder"
+  },
+  "the father": {
+   "voice": "am_michael",
+   "speed": 1.0,
+   "why": "Friendly host"
+  },
+  "the girl's friends (hikers)": {
+   "voice": "af_bella",
+   "speed": 1.1,
+   "why": "Young voices calling from up the trail"
+  }
+ }
+}
