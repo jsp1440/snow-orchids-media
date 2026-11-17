@@ -1,25 +1,26 @@
 # Snow Orchids: record the cast with Kokoro, an open-source voice model (Apache 2.0).
 # Free: no account, no API key, no credits. Actions tab > "Record cast audio (free)" > Run workflow.
 # Voices are set in kokoro-cast.json. The storybook plays the files this saves into audio/.
+# Passages already recorded with the same words and voice are skipped, so it is safe to run again at any time.
 name: Record cast audio (free)
 on:
   workflow_dispatch:
     inputs:
       chapter:
-        description: 'Chapter number (1 to 9)'
+        description: 'Which chapter: all, or a number 1 to 9'
         required: true
-        default: '1'
+        default: 'all'
       sample:
-        description: 'Only the short Chapter 1 sample (about 2 minutes of audio)'
+        description: 'Only the short Chapter 1 sample'
         type: boolean
-        default: true
+        default: false
 permissions:
   contents: write
 concurrency: record-cast-audio
 jobs:
   record:
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -36,13 +37,22 @@ jobs:
         with:
           path: ~/.cache/huggingface
           key: kokoro-82m-voices
-      - name: Record
-        run: python kokoro-audio.py --chapter "${{ inputs.chapter }}" ${{ inputs.sample && '--sample' || '' }}
-      - name: Save the recordings
-        if: always()
+      - name: Record and save, one chapter at a time
         run: |
           git config user.name "snow-orchids-audio-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add audio || true
-          git diff --cached --quiet || git commit -m "Cast audio (Kokoro): chapter ${{ inputs.chapter }}${{ inputs.sample && ' sample' || '' }}"
-          git push
+          if [ "${{ inputs.chapter }}" = "all" ]; then CHAPTERS="1 2 3 4 5 6 7 8 9"; else CHAPTERS="${{ inputs.chapter }}"; fi
+          PROBLEMS=""
+          for c in $CHAPTERS; do
+            echo "::group::Chapter $c"
+            python kokoro-audio.py --chapter "$c" ${{ inputs.sample && '--sample' || '' }} --max-minutes 300 || PROBLEMS="$PROBLEMS $c"
+            echo "::endgroup::"
+            git add audio || true
+            git diff --cached --quiet || git commit -q -m "Cast audio (Kokoro): chapter $c"
+            # save now, so a later problem cannot lose this chapter; retry if the repository changed meanwhile
+            for attempt in 1 2 3 4; do
+              if git pull -q --rebase origin "${{ github.ref_name }}" && git push -q; then echo "Chapter $c saved."; break; fi
+              echo "Save attempt $attempt did not go through; trying again."; sleep 8
+            done
+          done
+          if [ -n "$PROBLEMS" ]; then echo "::warning::Chapters with a problem:$PROBLEMS. Run again to retry them."; fi
