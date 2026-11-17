@@ -3144,8 +3144,1142 @@
    "voiceId": "kokoro:bm_george@0.95",
    "chars": 482,
    "timings": true
+  },
+  "c4-p000-01": {
+   "hash": "izn42e",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 60,
+   "timings": true
+  },
+  "c4-p001-01": {
+   "hash": "1c5ca1o",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 547,
+   "timings": true
+  },
+  "c4-p002-01": {
+   "hash": "pygf1k",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 224,
+   "timings": true
+  },
+  "c4-p003-01": {
+   "hash": "rhicmc",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 5,
+   "timings": true
+  },
+  "c4-p003-02": {
+   "hash": "paynd8",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 26,
+   "timings": true
+  },
+  "c4-p003-03": {
+   "hash": "1pbe41n",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 11,
+   "timings": true
+  },
+  "c4-p004-01": {
+   "hash": "1rna4ep",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 191,
+   "timings": true
+  },
+  "c4-p005-01": {
+   "hash": "msafme",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 20,
+   "timings": true
+  },
+  "c4-p006-01": {
+   "hash": "cg3xrg",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 365,
+   "timings": true
+  },
+  "c4-p007-01": {
+   "hash": "9belqj",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 14,
+   "timings": true
+  },
+  "c4-p007-02": {
+   "hash": "jra406",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 18,
+   "timings": true
+  },
+  "c4-p007-03": {
+   "hash": "171rx0m",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 41,
+   "timings": true
+  },
+  "c4-p008-01": {
+   "hash": "1x2gmie",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 426,
+   "timings": true
+  },
+  "c4-p009-01": {
+   "hash": "1l64ykk",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 318,
+   "timings": true
+  },
+  "c4-p010-01": {
+   "hash": "7coh8h",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 125,
+   "timings": true
+  },
+  "c4-p010-02": {
+   "hash": "7y69xd",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 11,
+   "timings": true
+  },
+  "c4-p010-03": {
+   "hash": "5au2pb",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 8,
+   "timings": true
+  },
+  "c4-p010-04": {
+   "hash": "9xk5ba",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 18,
+   "timings": true
+  },
+  "c4-p011-01": {
+   "hash": "1pzl1os",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 14,
+   "timings": true
+  },
+  "c4-p011-02": {
+   "hash": "1x15zvz",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 50,
+   "timings": true
+  },
+  "c4-p012-01": {
+   "hash": "dijr4d",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 377,
+   "timings": true
+  },
+  "c4-p013-01": {
+   "hash": "1k9uayc",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 119,
+   "timings": true
+  },
+  "c4-p014-01": {
+   "hash": "13kv9st",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 9,
+   "timings": true
+  },
+  "c4-p014-02": {
+   "hash": "hrr7hu",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 10,
+   "timings": true
+  },
+  "c4-p014-03": {
+   "hash": "14bdkmt",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 27,
+   "timings": true
+  },
+  "c4-p015-01": {
+   "hash": "1l46vdx",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 11,
+   "timings": true
+  },
+  "c4-p015-02": {
+   "hash": "yytrd5",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 48,
+   "timings": true
+  },
+  "c4-p015-03": {
+   "hash": "1bd7x32",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 93,
+   "timings": true
+  },
+  "c4-p016-01": {
+   "hash": "19qv0u6",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 151,
+   "timings": true
+  },
+  "c4-p017-01": {
+   "hash": "wunimi",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 79,
+   "timings": true
+  },
+  "c4-p018-01": {
+   "hash": "ldwu09",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 424,
+   "timings": true
+  },
+  "c4-p019-01": {
+   "hash": "gy2x0k",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 5,
+   "timings": true
+  },
+  "c4-p019-02": {
+   "hash": "1ttxayd",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 19,
+   "timings": true
+  },
+  "c4-p020-01": {
+   "hash": "742qdo",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 136,
+   "timings": true
+  },
+  "c4-p021-01": {
+   "hash": "jg2pd6",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 29,
+   "timings": true
+  },
+  "c4-p022-01": {
+   "hash": "1oma37a",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 133,
+   "timings": true
+  },
+  "c4-p023-01": {
+   "hash": "yn0k8p",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 491,
+   "timings": true
+  },
+  "c4-p024-01": {
+   "hash": "12ttvdf",
+   "voiceId": "kokoro:bf_alice@0.92",
+   "chars": 8,
+   "timings": true
+  },
+  "c4-p024-02": {
+   "hash": "wlujrz",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 178,
+   "timings": true
+  },
+  "c4-p025-01": {
+   "hash": "15vpi04",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 8,
+   "timings": true
+  },
+  "c4-p025-02": {
+   "hash": "bmwtn9",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 73,
+   "timings": true
+  },
+  "c4-p026-01": {
+   "hash": "tw1dlw",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 326,
+   "timings": true
+  },
+  "c4-p027-01": {
+   "hash": "1nhcsjt",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 192,
+   "timings": true
+  },
+  "c4-p028-01": {
+   "hash": "1o0vlav",
+   "voiceId": "kokoro:am_michael@1.0",
+   "chars": 11,
+   "timings": true
+  },
+  "c4-p028-02": {
+   "hash": "1qxj6yk",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 25,
+   "timings": true
+  },
+  "c4-p028-03": {
+   "hash": "1ordbfj",
+   "voiceId": "kokoro:am_michael@1.0",
+   "chars": 96,
+   "timings": true
+  },
+  "c4-p029-01": {
+   "hash": "1839u0g",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 15,
+   "timings": true
+  },
+  "c4-p029-02": {
+   "hash": "ci86s1",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 34,
+   "timings": true
+  },
+  "c4-p030-01": {
+   "hash": "a6oa11",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 419,
+   "timings": true
+  },
+  "c4-p031-01": {
+   "hash": "1n1gtqj",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 106,
+   "timings": true
+  },
+  "c4-p031-02": {
+   "hash": "1wu5yyk",
+   "voiceId": "kokoro:bf_alice@0.92",
+   "chars": 10,
+   "timings": true
+  },
+  "c4-p031-03": {
+   "hash": "e8meld",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 251,
+   "timings": true
+  },
+  "c4-p032-01": {
+   "hash": "i7g2xs",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 177,
+   "timings": true
+  },
+  "c4-p032-02": {
+   "hash": "1vmtpo2",
+   "voiceId": "kokoro:bf_alice@0.92",
+   "chars": 9,
+   "timings": true
+  },
+  "c4-p032-03": {
+   "hash": "k6l780",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 9,
+   "timings": true
+  },
+  "c4-p032-04": {
+   "hash": "1hs4wmw",
+   "voiceId": "kokoro:bf_alice@0.92",
+   "chars": 111,
+   "timings": true
+  },
+  "c4-p033-01": {
+   "hash": "w4kcxt",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 153,
+   "timings": true
+  },
+  "c4-p034-01": {
+   "hash": "3vuotc",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 363,
+   "timings": true
+  },
+  "c4-p035-01": {
+   "hash": "luxpli",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 311,
+   "timings": true
+  },
+  "c4-p036-01": {
+   "hash": "183kr30",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 23,
+   "timings": true
+  },
+  "c4-p036-02": {
+   "hash": "9a6gxi",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 16,
+   "timings": true
+  },
+  "c4-p036-03": {
+   "hash": "wo4z50",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 155,
+   "timings": true
+  },
+  "c4-p037-01": {
+   "hash": "1dlg4aa",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 32,
+   "timings": true
+  },
+  "c4-p037-02": {
+   "hash": "1mjw5vr",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 29,
+   "timings": true
+  },
+  "c4-p037-03": {
+   "hash": "5uta39",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 8,
+   "timings": true
+  },
+  "c4-p037-04": {
+   "hash": "2ydjzk",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 31,
+   "timings": true
+  },
+  "c4-p038-01": {
+   "hash": "giy4ft",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 8,
+   "timings": true
+  },
+  "c4-p038-02": {
+   "hash": "9a6gxi",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 16,
+   "timings": true
+  },
+  "c4-p039-01": {
+   "hash": "hairrz",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 285,
+   "timings": true
+  },
+  "c4-p040-01": {
+   "hash": "6huz8f",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 274,
+   "timings": true
+  },
+  "c4-p041-01": {
+   "hash": "1cfhbcj",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 14,
+   "timings": true
+  },
+  "c4-p041-02": {
+   "hash": "r1p1we",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 10,
+   "timings": true
+  },
+  "c4-p041-03": {
+   "hash": "179qgf1",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 44,
+   "timings": true
+  },
+  "c4-p042-01": {
+   "hash": "1sa9f5n",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 337,
+   "timings": true
+  },
+  "c4-p043-01": {
+   "hash": "10notd",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 7,
+   "timings": true
+  },
+  "c4-p043-02": {
+   "hash": "afwh2m",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 21,
+   "timings": true
+  },
+  "c4-p043-03": {
+   "hash": "8r6tvb",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 30,
+   "timings": true
+  },
+  "c4-p043-04": {
+   "hash": "zdcmx0",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 150,
+   "timings": true
+  },
+  "c4-p044-01": {
+   "hash": "1l9amo2",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 408,
+   "timings": true
+  },
+  "c4-p045-01": {
+   "hash": "wky9ol",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 346,
+   "timings": true
+  },
+  "c4-p046-01": {
+   "hash": "1e74tnn",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 299,
+   "timings": true
+  },
+  "c4-p047-01": {
+   "hash": "141padx",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 9,
+   "timings": true
+  },
+  "c4-p047-02": {
+   "hash": "1rwao30",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 14,
+   "timings": true
+  },
+  "c4-p048-01": {
+   "hash": "1e1yy92",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 783,
+   "timings": true
+  },
+  "c4-p049-01": {
+   "hash": "1amnsr6",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 22,
+   "timings": true
+  },
+  "c4-p050-01": {
+   "hash": "jnxgkr",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 42,
+   "timings": true
+  },
+  "c4-p050-02": {
+   "hash": "1wre8rb",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 23,
+   "timings": true
+  },
+  "c4-p050-03": {
+   "hash": "1eplcln",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 300,
+   "timings": true
+  },
+  "c4-p051-01": {
+   "hash": "wbuovc",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 42,
+   "timings": true
+  },
+  "c4-p051-02": {
+   "hash": "1jdetfc",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 100,
+   "timings": true
+  },
+  "c4-p051-03": {
+   "hash": "nd82x7",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 171,
+   "timings": true
+  },
+  "c4-p052-01": {
+   "hash": "1lsabx",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 432,
+   "timings": true
+  },
+  "c4-p053-01": {
+   "hash": "1efu5vx",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 381,
+   "timings": true
+  },
+  "c4-p054-01": {
+   "hash": "lo3ror",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 274,
+   "timings": true
+  },
+  "c4-p055-01": {
+   "hash": "7e7uab",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 131,
+   "timings": true
+  },
+  "c4-p056-01": {
+   "hash": "1s4dvlj",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 144,
+   "timings": true
+  },
+  "c4-p057-01": {
+   "hash": "1m1cklw",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 27,
+   "timings": true
+  },
+  "c4-p058-01": {
+   "hash": "6nw0av",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 575,
+   "timings": true
+  },
+  "c4-p059-01": {
+   "hash": "13kyeef",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 174,
+   "timings": true
+  },
+  "c4-p060-01": {
+   "hash": "1tf2vov",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 32,
+   "timings": true
+  },
+  "c4-p060-02": {
+   "hash": "uvxcp7",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 79,
+   "timings": true
+  },
+  "c4-p061-01": {
+   "hash": "z3osc3",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 8,
+   "timings": true
+  },
+  "c4-p061-02": {
+   "hash": "1j5wqdf",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 33,
+   "timings": true
+  },
+  "c4-p061-03": {
+   "hash": "19b1nos",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 107,
+   "timings": true
+  },
+  "c4-p062-01": {
+   "hash": "xilqed",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 8,
+   "timings": true
+  },
+  "c4-p062-02": {
+   "hash": "dyo2ky",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 49,
+   "timings": true
+  },
+  "c4-p062-03": {
+   "hash": "mna4n4",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 148,
+   "timings": true
+  },
+  "c4-p062-04": {
+   "hash": "1agw9eo",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 104,
+   "timings": true
+  },
+  "c4-p063-01": {
+   "hash": "8slt3i",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 34,
+   "timings": true
+  },
+  "c4-p063-02": {
+   "hash": "nags51",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 25,
+   "timings": true
+  },
+  "c4-p063-03": {
+   "hash": "t9apap",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 310,
+   "timings": true
+  },
+  "c4-p064-01": {
+   "hash": "iy2q29",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 56,
+   "timings": true
+  },
+  "c4-p064-02": {
+   "hash": "1dgzue1",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 92,
+   "timings": true
+  },
+  "c4-p065-01": {
+   "hash": "x02l9x",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 129,
+   "timings": true
+  },
+  "c4-p066-01": {
+   "hash": "iguju3",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 37,
+   "timings": true
+  },
+  "c4-p066-02": {
+   "hash": "5au2pb",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 8,
+   "timings": true
+  },
+  "c4-p066-03": {
+   "hash": "1buwzd1",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 227,
+   "timings": true
+  },
+  "c4-p066-04": {
+   "hash": "muj7d6",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 10,
+   "timings": true
+  },
+  "c4-p066-05": {
+   "hash": "hbrzbj",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 121,
+   "timings": true
+  },
+  "c4-p067-01": {
+   "hash": "antnkj",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 40,
+   "timings": true
+  },
+  "c4-p067-02": {
+   "hash": "187qo07",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 22,
+   "timings": true
+  },
+  "c4-p067-03": {
+   "hash": "k6l780",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 9,
+   "timings": true
+  },
+  "c4-p067-04": {
+   "hash": "1q1ofea",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 18,
+   "timings": true
+  },
+  "c4-p068-01": {
+   "hash": "1e8e5zw",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 78,
+   "timings": true
+  },
+  "c4-p069-01": {
+   "hash": "cwo30i",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 143,
+   "timings": true
+  },
+  "c4-p070-01": {
+   "hash": "vwtc11",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 19,
+   "timings": true
+  },
+  "c4-p070-02": {
+   "hash": "9a6gxi",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 16,
+   "timings": true
+  },
+  "c4-p070-03": {
+   "hash": "yey2sk",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 143,
+   "timings": true
+  },
+  "c4-p071-01": {
+   "hash": "1f7wpvs",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 394,
+   "timings": true
+  },
+  "c4-p071-02": {
+   "hash": "snhdpr",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 10,
+   "timings": true
+  },
+  "c4-p071-03": {
+   "hash": "uum5v3",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 25,
+   "timings": true
+  },
+  "c4-p071-04": {
+   "hash": "9cf9fj",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 84,
+   "timings": true
+  },
+  "c4-p071-05": {
+   "hash": "1cct27y",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 78,
+   "timings": true
+  },
+  "c4-p072-01": {
+   "hash": "ejmlyv",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 439,
+   "timings": true
+  },
+  "c4-p073-01": {
+   "hash": "dk83ht",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 36,
+   "timings": true
+  },
+  "c4-p073-02": {
+   "hash": "wjfewh",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 281,
+   "timings": true
+  },
+  "c4-p074-01": {
+   "hash": "pik2wo",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 120,
+   "timings": true
+  },
+  "c4-p075-01": {
+   "hash": "113232v",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 35,
+   "timings": true
+  },
+  "c4-p075-02": {
+   "hash": "u2o510",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 17,
+   "timings": true
+  },
+  "c4-p075-03": {
+   "hash": "k6l780",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 9,
+   "timings": true
+  },
+  "c4-p075-04": {
+   "hash": "yrw7ul",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 32,
+   "timings": true
+  },
+  "c4-p076-01": {
+   "hash": "1hvwbsg",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 48,
+   "timings": true
+  },
+  "c4-p076-02": {
+   "hash": "tlasmc",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 12,
+   "timings": true
+  },
+  "c4-p076-03": {
+   "hash": "5h7v1o",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 14,
+   "timings": true
+  },
+  "c4-p077-01": {
+   "hash": "4002mz",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 33,
+   "timings": true
+  },
+  "c4-p077-02": {
+   "hash": "w1ad7f",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 50,
+   "timings": true
+  },
+  "c4-p077-03": {
+   "hash": "k6l780",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 9,
+   "timings": true
+  },
+  "c4-p077-04": {
+   "hash": "184xo",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 154,
+   "timings": true
+  },
+  "c4-p077-05": {
+   "hash": "1eq13as",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 18,
+   "timings": true
+  },
+  "c4-p077-06": {
+   "hash": "1rv1b6h",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 60,
+   "timings": true
+  },
+  "c4-p078-01": {
+   "hash": "kwuqk8",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 25,
+   "timings": true
+  },
+  "c4-p078-02": {
+   "hash": "furl9q",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 67,
+   "timings": true
+  },
+  "c4-p078-03": {
+   "hash": "x9vr4v",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 56,
+   "timings": true
+  },
+  "c4-p079-01": {
+   "hash": "1u6s83b",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 137,
+   "timings": true
+  },
+  "c4-p080-01": {
+   "hash": "1ww3kcv",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 9,
+   "timings": true
+  },
+  "c4-p080-02": {
+   "hash": "cbesgv",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 22,
+   "timings": true
+  },
+  "c4-p080-03": {
+   "hash": "ab2yh1",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 158,
+   "timings": true
+  },
+  "c4-p081-01": {
+   "hash": "m0la1g",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 166,
+   "timings": true
+  },
+  "c4-p081-02": {
+   "hash": "1wu5yyk",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 10,
+   "timings": true
+  },
+  "c4-p081-03": {
+   "hash": "ybnwrt",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 16,
+   "timings": true
+  },
+  "c4-p082-01": {
+   "hash": "1exizd8",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 220,
+   "timings": true
+  },
+  "c4-p082-02": {
+   "hash": "1v5mx9e",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 26,
+   "timings": true
+  },
+  "c4-p082-03": {
+   "hash": "5cinzx",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 85,
+   "timings": true
+  },
+  "c4-p083-01": {
+   "hash": "1hphnje",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 9,
+   "timings": true
+  },
+  "c4-p083-02": {
+   "hash": "3uec2k",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 62,
+   "timings": true
+  },
+  "c4-p083-03": {
+   "hash": "ee2kcb",
+   "voiceId": "kokoro:bf_emma@0.9",
+   "chars": 64,
+   "timings": true
+  },
+  "c4-p084-01": {
+   "hash": "1alogij",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 103,
+   "timings": true
+  },
+  "c4-p085-01": {
+   "hash": "1xd6wxz",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 427,
+   "timings": true
+  },
+  "c4-p086-01": {
+   "hash": "1ezzt8m",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 409,
+   "timings": true
+  },
+  "c4-p087-01": {
+   "hash": "1axwy8c",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 76,
+   "timings": true
+  },
+  "c4-p088-01": {
+   "hash": "1ntw2h1",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 431,
+   "timings": true
+  },
+  "c4-p089-01": {
+   "hash": "1n3ckm7",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 170,
+   "timings": true
+  },
+  "c4-p090-01": {
+   "hash": "hfbpn2",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 48,
+   "timings": true
+  },
+  "c4-p090-02": {
+   "hash": "1rwao30",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 14,
+   "timings": true
+  },
+  "c4-p090-03": {
+   "hash": "sug69n",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 50,
+   "timings": true
+  },
+  "c4-p090-04": {
+   "hash": "mntgut",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 48,
+   "timings": true
+  },
+  "c4-p091-01": {
+   "hash": "1w6yam6",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 9,
+   "timings": true
+  },
+  "c4-p091-02": {
+   "hash": "1rwao30",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 14,
+   "timings": true
+  },
+  "c4-p091-03": {
+   "hash": "18p9iw8",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 12,
+   "timings": true
+  },
+  "c4-p092-01": {
+   "hash": "1dpffv7",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 36,
+   "timings": true
+  },
+  "c4-p092-02": {
+   "hash": "ceiakz",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 12,
+   "timings": true
+  },
+  "c4-p092-03": {
+   "hash": "5au2pb",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 8,
+   "timings": true
+  },
+  "c4-p092-04": {
+   "hash": "1bk4zi3",
+   "voiceId": "kokoro:am_santa@0.95",
+   "chars": 58,
+   "timings": true
+  },
+  "c4-p093-01": {
+   "hash": "7z8i1h",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 474,
+   "timings": true
+  },
+  "c4-p094-01": {
+   "hash": "vcz694",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 50,
+   "timings": true
+  },
+  "c4-p094-02": {
+   "hash": "9a6gxi",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 16,
+   "timings": true
+  },
+  "c4-p094-03": {
+   "hash": "114g9ko",
+   "voiceId": "kokoro:af_heart@1.0",
+   "chars": 44,
+   "timings": true
+  },
+  "c4-p094-04": {
+   "hash": "ljm9y8",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 166,
+   "timings": true
+  },
+  "c4-p095-01": {
+   "hash": "v4fpoi",
+   "voiceId": "kokoro:bm_george@0.95",
+   "chars": 406,
+   "timings": true
   }
  },
  "model": "kokoro-82m",
- "updated": "2026-11-17T09:38:30Z"
+ "updated": "2026-11-17T09:53:55Z"
 }
