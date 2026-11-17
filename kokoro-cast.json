@@ -26,9 +26,9 @@
    "why": "Soft but bright librarian"
   },
   "Marigold": {
-   "voice": "af_river",
-   "speed": 1.08,
-   "why": "Breathless, hurrying elf"
+   "voice": "af_bella",
+   "speed": 0.95,
+   "why": "Warm and caring; worried for Blitzen, but gentle and unhurried"
   },
   "Tiny Tamsin": {
    "voice": "af_sky",
@@ -101,8 +101,8 @@
    "why": "Friendly host"
   },
   "the girl's friends (hikers)": {
-   "voice": "af_bella",
-   "speed": 1.1,
+   "voice": "af_river",
+   "speed": 1.08,
    "why": "Young voices calling from up the trail"
   }
  }

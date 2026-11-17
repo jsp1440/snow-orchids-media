@@ -79,31 +79,35 @@ def fill(start, end, total):
         last_start, last_end = start[i], end[i]
     return [round(x, 3) for x in start], [round(x, 3) for x in end]
 
-t0 = time.time(); made = 0
+t0 = time.time(); made = 0; failed = []
 for s in todo:
     if (time.time() - t0) / 60 > args.max_minutes: print('Stopping at the time limit; run again to continue.'); break
     voice, speed = voice_for(s['role'])
-    results = list(pipe(voice)(s['text'], voice=voice, speed=speed, split_pattern=r'\n+'))
-    chunks, offsets, t = [], [], 0.0
-    for r in results:
-        a = r.audio
-        if a is None: continue
-        a = a.detach().cpu().numpy() if hasattr(a, 'detach') else np.asarray(a)
-        offsets.append(t); chunks.append(a.astype(np.float32)); t += len(a) / SR
-        gap = np.zeros(int(SR * 0.25), np.float32); chunks.append(gap); t += 0.25      # a breath between lines of verse
-    if not chunks: print('  no audio for', s['id']); continue
-    audio = np.concatenate(chunks[:-1]); total = len(audio) / SR
-    d = os.path.join(OUT, f"c{s['chapter']}"); os.makedirs(d, exist_ok=True)
-    wav = os.path.join(d, s['id'] + '.wav'); mp3 = os.path.join(d, s['id'] + '.mp3')
-    with wave.open(wav, 'wb') as w:
-        w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
-        w.writeframes((np.clip(audio, -1, 1) * 32767).astype('<i2').tobytes())
-    subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', wav, '-ac', '1', '-b:a', '64k', mp3], check=True); os.remove(wav)
-    st, en = fill(*char_timings(s['text'], [r for r in results if r.audio is not None], offsets), total)
-    json.dump({'chars': s['text'], 'start': st, 'end': en}, open(os.path.join(d, s['id'] + '.json'), 'w', encoding='utf-8'), ensure_ascii=False)
-    produced['segments'][s['id']] = {'hash': s['hash'], 'voiceId': f'kokoro:{voice}@{speed}', 'chars': len(s['text']), 'timings': True}
-    produced['model'] = 'kokoro-82m'; produced['updated'] = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
-    json.dump(produced, open(ppath, 'w', encoding='utf-8'), indent=1)
-    made += 1
-    print(f"  recorded {s['id']}  {s['role']} ({voice})  {total:.1f}s")
-print(f'Done: {made} passages recorded in {(time.time() - t0) / 60:.1f} minutes.')
+    try:
+        results = list(pipe(voice)(s['text'], voice=voice, speed=speed, split_pattern=r'\n+'))
+        chunks, offsets, t = [], [], 0.0
+        for r in results:
+            a = r.audio
+            if a is None: continue
+            a = a.detach().cpu().numpy() if hasattr(a, 'detach') else np.asarray(a)
+            offsets.append(t); chunks.append(a.astype(np.float32)); t += len(a) / SR
+            gap = np.zeros(int(SR * 0.25), np.float32); chunks.append(gap); t += 0.25      # a breath between lines of verse
+        if not chunks: raise RuntimeError('no audio was produced')
+        audio = np.concatenate(chunks[:-1]); total = len(audio) / SR
+        d = os.path.join(OUT, f"c{s['chapter']}"); os.makedirs(d, exist_ok=True)
+        wav = os.path.join(d, s['id'] + '.wav'); mp3 = os.path.join(d, s['id'] + '.mp3')
+        with wave.open(wav, 'wb') as w:
+            w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
+            w.writeframes((np.clip(audio, -1, 1) * 32767).astype('<i2').tobytes())
+        subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', wav, '-ac', '1', '-b:a', '64k', mp3], check=True); os.remove(wav)
+        st, en = fill(*char_timings(s['text'], [r for r in results if r.audio is not None], offsets), total)
+        json.dump({'chars': s['text'], 'start': st, 'end': en}, open(os.path.join(d, s['id'] + '.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+        produced['segments'][s['id']] = {'hash': s['hash'], 'voiceId': f'kokoro:{voice}@{speed}', 'chars': len(s['text']), 'timings': True}
+        produced['model'] = 'kokoro-82m'; produced['updated'] = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
+        json.dump(produced, open(ppath, 'w', encoding='utf-8'), indent=1)
+        made += 1
+        print(f"  recorded {s['id']}  {s['role']} ({voice})  {total:.1f}s")
+    except Exception as err:            # one bad passage must not stop the chapter; it is listed and can be recorded again
+        failed.append(s['id']); print(f"  PROBLEM with {s['id']} ({s['role']}, {voice}): {type(err).__name__}: {err}", flush=True)
+print(f'Done: {made} passages recorded in {(time.time() - t0) / 60:.1f} minutes.' + (f' {len(failed)} had a problem: {", ".join(failed)}' if failed else ''))
+sys.exit(1 if failed and not made else 0)
