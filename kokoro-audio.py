@@ -11,6 +11,7 @@ Passages already recorded with the same text and the same voice are skipped, so 
 """
 import argparse, json, os, re, subprocess, sys, time, wave
 import numpy as np
+import kokoro_pron as kp
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SR = 24000
@@ -27,6 +28,8 @@ segs = [s for s in plan['segments'] if s['chapter'] == args.chapter]
 if args.sample:
     segs = [s for s in segs if s['chapter'] == plan['sample']['chapter'] and s['para'] in plan['sample']['paragraphs']]
 
+PRON = cast.get('pronunciations', {})
+
 def voice_for(role):
     c = cast['roles'].get(role) or cast['default']
     return c['voice'], float(c.get('speed', 1.0))
@@ -37,7 +40,8 @@ ppath = os.path.join(OUT, 'produced.json')
 produced = json.load(open(ppath, encoding='utf-8')) if os.path.exists(ppath) else {'version': 1, 'segments': {}}
 def done(s):
     p = produced['segments'].get(s['id']); v, sp = voice_for(s['role'])
-    return bool(p) and p.get('hash') == s['hash'] and p.get('voiceId') == f'kokoro:{v}@{sp}'
+    want = 'kokoro:' + str(v) + '@' + str(sp) + kp.tag(s['text'], PRON, v[0])   # includes any fixed pronunciations used
+    return bool(p) and p.get('hash') == s['hash'] and p.get('voiceId') == want
 todo = [s for s in segs if not done(s)]
 print(f"Chapter {args.chapter}{' sample' if args.sample else ''}: {len(segs)} passages, {len(todo)} to record, {sum(len(s['text']) for s in todo):,} characters.")
 by = {}
@@ -84,7 +88,7 @@ for s in todo:
     if (time.time() - t0) / 60 > args.max_minutes: print('Stopping at the time limit; run again to continue.'); break
     voice, speed = voice_for(s['role'])
     try:
-        results = list(pipe(voice)(s['text'], voice=voice, speed=speed, split_pattern=r'\n+'))
+        results = list(pipe(voice)(kp.apply(s['text'], PRON, voice[0]), voice=voice, speed=speed, split_pattern=r'\n+'))
         chunks, offsets, t = [], [], 0.0
         for r in results:
             a = r.audio
@@ -102,7 +106,7 @@ for s in todo:
         subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', wav, '-ac', '1', '-b:a', '64k', mp3], check=True); os.remove(wav)
         st, en = fill(*char_timings(s['text'], [r for r in results if r.audio is not None], offsets), total)
         json.dump({'chars': s['text'], 'start': st, 'end': en}, open(os.path.join(d, s['id'] + '.json'), 'w', encoding='utf-8'), ensure_ascii=False)
-        produced['segments'][s['id']] = {'hash': s['hash'], 'voiceId': f'kokoro:{voice}@{speed}', 'chars': len(s['text']), 'timings': True}
+        produced['segments'][s['id']] = {'hash': s['hash'], 'voiceId': 'kokoro:' + str(voice) + '@' + str(speed) + kp.tag(s['text'], PRON, voice[0]), 'chars': len(s['text']), 'timings': True}
         produced['model'] = 'kokoro-82m'; produced['updated'] = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
         json.dump(produced, open(ppath, 'w', encoding='utf-8'), indent=1)
         made += 1

@@ -65,7 +65,7 @@
    "speed": 0.82,
    "why": "Slow and deep, clearly different from Santa"
   },
-  "the vicuña": {
+  "the vicu\u00f1a": {
    "voice": "am_puck",
    "speed": 1.08,
    "why": "Light and quick, as if trying not to laugh"
@@ -80,12 +80,12 @@
    "speed": 1.05,
    "why": "Bright, energetic girl"
   },
-  "Mamá Rosa": {
+  "Mam\u00e1 Rosa": {
    "voice": "bf_isabella",
    "speed": 0.92,
    "why": "Grounded elder"
   },
-  "Tomás": {
+  "Tom\u00e1s": {
    "voice": "am_eric",
    "speed": 1.0,
    "why": "Friendly, good-humored"
@@ -104,6 +104,21 @@
    "voice": "af_river",
    "speed": 1.08,
    "why": "Young voices calling from up the trail"
+  }
+ },
+ "_about_pronunciations": "Words the voice engine says wrongly. Each is written as [word](/sounds/) for the engine only; the page text is unchanged. 'a' = American voices, 'b' = British voices. Changing a spelling re-records just the passages that contain that word.",
+ "pronunciations": {
+  "Claus": {
+   "a": "kl\u02c8\u0254z",
+   "b": "kl\u02c8\u0254\u02d0z"
+  },
+  "Claus's": {
+   "a": "kl\u02c8\u0254z\u026az",
+   "b": "kl\u02c8\u0254\u02d0z\u026az"
+  },
+  "Claus\u2019s": {
+   "a": "kl\u02c8\u0254z\u026az",
+   "b": "kl\u02c8\u0254\u02d0z\u026az"
   }
  }
 }
